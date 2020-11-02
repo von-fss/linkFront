@@ -1,0 +1,28 @@
+<div>
+    <form (ngSubmit)="onSubmit()">
+        <p>
+            <mat-form-field appearance="legacy">
+                <mat-label>Nome</mat-label>
+                <input matInput placeholder="" [(ngModel])="customer.nome">
+                <mat-hint>Nome da pessoa ou empresa</mat-hint>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="legacy">
+                <mat-label>CPF/CNPJ</mat-label>
+                <input matInput placeholder="" [(ngModel])="customer.cpf">
+                <mat-hint>CPF/CNPJ</mat-hint>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="legacy">
+                <mat-label>Tipo de pessoa</mat-label>
+                <input matInput placeholder="" [(ngModel])="customer.tipoPessoa">
+                <mat-hint>F ou J</mat-hint>
+            </mat-form-field>
+        </p>
+        <div class="example-button-row">
+            <button mat-raised-button color="primary" type="submit">Enviar</button>
+        </div>
+    </form>
+</div>
