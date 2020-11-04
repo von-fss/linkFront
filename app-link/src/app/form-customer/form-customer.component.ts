@@ -9,21 +9,14 @@ import {CustomerService} from '../providers/customer.service';
   styleUrls: ['./form-customer.component.scss']
 })
 export class FormCustomerComponent implements OnInit {
-
-  customer: any = {
-    nome: null,
-    cpf: null,
-    tipoPessoa: null
-  }
   
   constructor(private customerService: CustomerService) { }
 
   ngOnInit(): void {
   }
 
-  onSubmit() {
-    console.log(this.customer);
-    this.customerService.addCustomer(this.customer);
+  onSubmit(customer) {
+      this.customerService.addCustomer(customer.value);
   }
 
 }

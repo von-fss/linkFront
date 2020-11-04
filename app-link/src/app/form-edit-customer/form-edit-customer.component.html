@@ -1,0 +1,35 @@
+<div>
+    <form #formUpdate="ngForm" (ngSubmit)="onSubmit(formUpdate)" *ngIf="customers$ | async as customers">
+        <p>
+            <mat-form-field appearance="legacy">
+                <mat-label>Id</mat-label>
+                <input matInput placeholder="" id="id" name="customerId" [ngModel]="customerId">
+                <mat-hint>ID da edição</mat-hint>
+            </mat-form-field>
+        </p>        
+        <p>
+            <mat-form-field appearance="legacy">
+                <mat-label>Nome</mat-label>
+                <input matInput placeholder="" id="nome" name="customers.nome" [(ngModel)]="customers.nome">
+                <mat-hint>Nome da pessoa ou empresa</mat-hint>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="legacy">
+                <mat-label>CPF/CNPJ</mat-label>
+                <input matInput placeholder="" id="cpf" name="customers.cpf" [(ngModel)]="customers.cpf">
+                <mat-hint>CPF/CNPJ</mat-hint>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="legacy">
+                <mat-label>Tipo de pessoa</mat-label>
+                <input matInput placeholder="" id="tipoPessoa" name="customers.tipoPessoa" [(ngModel)]="customers.tipoPessoa"> 
+                <mat-hint>F ou J</mat-hint>
+            </mat-form-field>
+        </p>
+        <div class="example-button-row">
+            <button mat-raised-button color="primary" type="submit">Enviar</button>
+        </div>
+    </form>
+  </div>

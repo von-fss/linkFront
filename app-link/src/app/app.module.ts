@@ -18,12 +18,14 @@ import { MatInputModule } from '@angular/material/input';
 
 import { ListCustomerComponent } from './list-customer/list-customer.component';
 import { FormCustomerComponent } from './form-customer/form-customer.component';
+import { FormEditCustomerComponent } from './form-edit-customer/form-edit-customer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListCustomerComponent,
-    FormCustomerComponent
+    FormCustomerComponent,
+    FormEditCustomerComponent
   ],
   imports: [
     BrowserModule,
